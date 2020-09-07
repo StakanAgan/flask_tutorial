@@ -6,6 +6,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
+from flask_mail import Mail
 
 from config import Config
 
@@ -15,6 +16,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
+mail = Mail(app)
 
 # for avoid cyclic import
 from app import routes, models, errors
@@ -40,10 +42,10 @@ if not app.debug:
     file_handler = RotatingFileHandler('logs/microblog.log', maxBytes=10240,
                                        backupCount=10)
     file_handler.setFormatter(logging.Formatter(
-        '%(asctime)s %(levelname)s: %(message)s [in %[pathname)s:%(lineno)d]'
+        '%(asctime)s %(levelname)s: %(message)s'
     ))
     file_handler.setLevel(logging.INFO)
     app.logger.addHandler(file_handler)
 
     app.logger.setLevel(logging.INFO)
-    # app.logger.info('Microblog startup')
+    app.logger.info('Microblog startup')
