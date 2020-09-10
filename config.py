@@ -20,3 +20,6 @@ class Config:
     ADMINS = ['aganek9611@gmail.com']
 
     POSTS_PER_PAGE = 5
+
+    LANGUAGES = ['en', 'ru']
+    # BABEL_TRANSLATION_DIRECTORIES = os.path.join(basedir, os.environ.get('BABEL_TRANSLATION_DIRECTORIES'))
