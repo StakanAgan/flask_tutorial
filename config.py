@@ -23,3 +23,4 @@ class Config:
 
     LANGUAGES = ['en', 'ru']
     # BABEL_TRANSLATION_DIRECTORIES = os.path.join(basedir, os.environ.get('BABEL_TRANSLATION_DIRECTORIES'))
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')

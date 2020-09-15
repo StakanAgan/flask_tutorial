@@ -1,8 +1,12 @@
 from datetime import datetime, timedelta
 import unittest
 
+from langdetect import detect
+
 from app import app, db
 from app.models import User, Post
+from app.translate import translate
+
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
@@ -81,6 +85,20 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(f2, [p2, p3])
         self.assertEqual(f3, [p3, p4])
         self.assertEqual(f4, [p4])
+
+
+class TranslateCase(unittest.TestCase):
+    def test_from_en_to_ru(self):
+        p1 = translate('Hi, how are you today?', 'en', 'ru')
+        lang = detect(p1)
+        self.assertEqual(lang, 'ru')
+
+    def test_from_ru_to_es(self):
+        p1 = translate('Хорошая погода, согласен?', 'ru', 'es')
+        lang = detect(p1)
+        self.assertEqual(lang, 'es')
+
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
