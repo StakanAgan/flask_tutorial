@@ -1,7 +1,4 @@
 from flask import request, url_for
-from flask_login import current_user
-
-from app import app
 
 
 def render_post_pagination(page_title: str, posts):

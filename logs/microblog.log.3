@@ -1,114 +1,89 @@
-2020-09-08 21:37:54,896 ERROR: Exception on /user/Elza [GET]
+2020-09-10 23:38:37,514 INFO: Microblog startup
+2020-09-15 21:49:37,195 INFO: Microblog startup
+2020-09-15 21:49:45,061 INFO: Microblog startup
+2020-09-15 22:31:35,595 INFO: Microblog startup
+2020-09-15 22:32:13,390 INFO: Microblog startup
+2020-09-15 22:32:13,390 INFO: Microblog startup
+2020-09-15 22:47:51,449 INFO: Microblog startup
+2020-09-15 22:47:51,449 INFO: Microblog startup
+2020-09-15 22:47:51,449 INFO: Microblog startup
+2020-09-15 22:54:37,588 INFO: Microblog startup
+2020-09-15 22:54:37,588 INFO: Microblog startup
+2020-09-15 22:54:37,588 INFO: Microblog startup
+2020-09-15 22:54:37,588 INFO: Microblog startup
+2020-09-16 00:02:07,011 INFO: Microblog startup
+2020-09-16 00:03:05,556 INFO: Microblog startup
+2020-09-16 00:03:39,800 INFO: Microblog startup
+2020-09-16 00:04:28,451 INFO: Microblog startup
+2020-09-16 00:04:41,985 INFO: Microblog startup
+2020-09-16 00:06:17,945 INFO: Microblog startup
+2020-09-16 00:07:40,079 INFO: Microblog startup
+2020-09-16 00:08:14,581 INFO: Microblog startup
+2020-09-16 00:08:25,052 INFO: Microblog startup
+2020-09-16 00:09:35,826 INFO: Microblog startup
+2020-09-16 00:12:07,651 INFO: Microblog startup
+2020-09-16 00:13:10,334 INFO: Microblog startup
+2020-09-16 00:20:41,324 INFO: Microblog startup
+2020-09-21 22:49:57,653 INFO: Microblog startup
+2020-09-21 22:50:02,353 ERROR: Exception on /index [GET]
+Traceback (most recent call last):
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1926, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1908, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
   File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/app/routes.py", line 102, in user
-    return render_template('user.html', user=user, posts=posts.items,
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1816, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1744, in handle_http_exception
+    return handler(e)
+  File "/home/ctkn/PycharmProjects/flask_tutorial/app/errors/handlers.py", line 9, in not_found_error
+    return render_template('errors/404.html'), 404
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
   File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/app/templates/user.html", line 39, in template
-    <span aria-hidden="true">&larr;</span> Newer posts
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'true'
-2020-09-08 21:40:24,280 INFO: Microblog startup
-2020-09-08 21:40:32,257 ERROR: Exception on /user/Elza [GET]
-Traceback (most recent call last):
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/home/ctkn/PycharmProjects/flask_tutorial/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ctkn/PycharmProjects/flask_tutorial/app/templates/base.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/home/ctkn/PycharmProjects/flask_tutorial/app/templates/base.html", line 19, in block "navbar"
+    <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2216, in handle_url_build_error
     reraise(exc_type, exc_value, tb)
   File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/app/routes.py", line 102, in user
-    return render_template('user.html', user=user, posts=posts.items,
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/app/templates/user.html", line 39, in template
-    <span aria-hidden="true">&larr;</span> Newer posts
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'true'
-2020-09-08 21:41:23,382 INFO: Microblog startup
-2020-09-08 21:41:25,209 ERROR: Exception on /user/Elza [GET]
-Traceback (most recent call last):
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/app/routes.py", line 102, in user
-    return render_template('user.html', user=user, posts=posts.items,
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/ctkn/PycharmProjects/flask_tutorial/app/templates/user.html", line 39, in template
-    <span aria-hidden="true">&larr;</span> Newer post </a>
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'true'
-2020-09-08 21:41:59,607 INFO: Microblog startup
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/flask/helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "/home/ctkn/PycharmProjects/flask_tutorial/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'auth.index' instead?
